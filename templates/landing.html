@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistem E-Voting Pilkades</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <div class="card landing-card">
+        <h1>Sistem E-Voting</h1>
+        <h2>Pemilihan Kepala Desa</h2>
+
+        <p class="subtitle">
+            Silakan pilih peran Anda untuk melanjutkan
+        </p>
+
+        <div class="button-group">
+    <a href="/warga/register" class="btn btn-green">WARGA</a>
+    <a href="/admin/login" class="btn btn-blue">ADMIN</a>
+</div>
+
+<a href="/warga/result" class="btn" style="margin-top:20px;">
+    Lihat Hasil Voting
+</a>
+
+    </div>
+</div>
+
+</body>
+</html>

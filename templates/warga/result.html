@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Hasil Voting</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <h3>📊 Hasil Voting</h3>
+        <p>Hasil akhir pemilihan kepala desa</p>
+
+        <canvas id="hasilChart"></canvas>
+
+        <p style="margin-top:15px;">
+            Calon A: <strong>{{ calon_a }}</strong> suara<br>
+            Calon B: <strong>{{ calon_b }}</strong> suara
+        </p>
+
+        <a href="/" style="margin-top:20px;">⬅ Kembali ke Beranda</a>
+    </div>
+</div>
+
+<script>
+    const ctx = document.getElementById('hasilChart');
+
+    const data = {
+        labels: ['Calon A', 'Calon B'],
+        datasets: [{
+            label: 'Jumlah Suara',
+            data: [{{ calon_a }}, {{ calon_b }}],
+            backgroundColor: ['#28a745', '#dc3545']
+        }]
+    };
+
+    const config = {
+        type: 'bar',
+        data: data,
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        stepSize: 1
+                    }
+                }
+            }
+        }
+    };
+
+    new Chart(ctx, config);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background: linear-gradient(135deg, #e3f2fd, #f8f9fa);
+    margin: 0;
+    padding: 0;
+}
+
+/* CENTER */
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CARD */
+.card {
+    background: white;
+    width: 420px;
+    padding: 35px 30px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    text-align: center;
+}
+
+/* LANDING */
+.landing-card h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #333;
+}
+
+.landing-card h2 {
+    margin-top: 5px;
+    font-size: 22px;
+    color: #555;
+}
+
+.subtitle {
+    margin: 20px 0 30px;
+    color: #666;
+}
+
+/* BUTTON GROUP */
+.button-group {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* INPUT */
+input {
+    width: 100%;
+    padding: 11px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+/* BUTTON */
+.btn {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.2s;
+}
+
+/* COLORS */
+.btn-green {
+    background-color: #28a745;
+}
+
+.btn-green:hover {
+    background-color: #218838;
+}
+
+.btn-blue {
+    background-color: #007bff;
+}
+
+.btn-blue:hover {
+    background-color: #0069d9;
+}
+
+.btn-red {
+    background-color: #dc3545;
+}
+
+.btn-red:hover {
+    background-color: #b02a37;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0069d9;
+}
+
+a {
+    margin-top: 15px;
+    display: inline-block;
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+.admin-links {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.admin-links a {
+    color: #0d6efd;
+    font-size: 15px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.admin-links a:hover {
+    text-decoration: underline;
+}
+.candidate {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.candidate img {
+    width: 100%;              /* full lebar card */
+    max-width: 260px;         /* ukuran banner */
+    height: 160px;            /* tinggi banner */
+    border-radius: 8px;       /* sudut sedikit melengkung */
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 2px solid #ddd;
+}
+.candidate-wrapper {
+    display: flex;
+    justify-content: space-between; /* KIRI - KANAN */
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.candidate-box {
+    width: 48%;            /* FIX: dua kolom */
+    text-align: center;
+}
+
+.candidate-box img {
+    width: 100%;
+    height: auto;          /* BIAR FULL, TIDAK KEPOTONG */
+    object-fit: contain;   /* tampilkan seluruh gambar */
+    border-radius: 0;      /* HILANGKAN LENGKUNG */
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.candidate-name {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.candidate-box button {
+    width: 80%;
+}
+

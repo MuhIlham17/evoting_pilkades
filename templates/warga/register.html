@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registrasi Pemilih</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <h3>📝 Registrasi Pemilih</h3>
+        <p>Masukkan data sesuai KTP</p>
+
+        <form method="post">
+            <input name="nik" placeholder="NIK" required>
+            <input name="domisili" placeholder="Domisili (contoh: Jatireja)" required>
+            <button type="submit">Verifikasi & Lanjutkan</button>
+        </form>
+
+        <a href="/">⬅ Kembali ke Beranda</a>
+    </div>
+</div>
+
+</body>
+</html>

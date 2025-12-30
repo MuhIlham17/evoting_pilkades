@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Voting</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <h3>🗳️ Pilih Calon Kepala Desa</h3>
+        <p>Silakan pilih salah satu calon</p>
+
+        <form method="post">
+
+            <form method="post">
+
+    <div class="candidate-wrapper">
+
+        <!-- CALON 1 -->
+        <div class="candidate-box">
+            <img src="{{ url_for('static', filename='img/calon1.jpg') }}" alt="Calon A">
+            <p class="candidate-name">Calon 1</p>
+            <button name="pilihan" value="A" class="btn btn-green">Pilih</button>
+        </div>
+
+        <!-- CALON 2 -->
+        <div class="candidate-box">
+            <img src="{{ url_for('static', filename='img/calon2.jpg') }}" alt="Calon B">
+            <p class="candidate-name">Calon 2</p>
+            <button name="pilihan" value="B" class="btn btn-red">Pilih</button>
+        </div>
+
+    </div>
+
+</form>
+
+    </div>
+</div>
+
+</body>
+</html>

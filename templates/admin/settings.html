@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pengaturan Pemilihan</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <h3>⚙️</h3>
+        <p>Atur jadwal dan wilayah pemilih</p>
+
+        <form method="post">
+            <input name="wilayah" value="{{ settings.wilayah }}" placeholder="Nama Desa" required>
+
+            <label>Jam Mulai</label>
+            <input type="time" name="start" required>
+
+            <label>Jam Selesai</label>
+            <input type="time" name="end" required>
+
+            <button type="submit">💾</button>
+        </form>
+
+        <a href="/admin/dashboard">⬅ Kembali ke Dashboard</a>
+    </div>
+</div>
+
+</body>
+</html>

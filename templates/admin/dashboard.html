@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard Admin</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+    Dashboard Admin
+</div>
+
+<!-- LAYOUT -->
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <div class="menu">
+            <a href="/admin/settings">⚙ Setting</a>
+            <a href="/warga/result">Hasil Vote</a>
+        </div>
+
+        <a href="/" class="exit">Exit</a>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+        <p>Status Pemilihan: <strong>{{ status }}</strong></p>
+        <p>Wilayah: <strong>{{ settings.wilayah }}</strong></p>
+        <p>Waktu Voting: <strong>{{ settings.start }} - {{ settings.end }}</strong></p>
+    </div>
+
+</div>
+
+</body>
+</html>
